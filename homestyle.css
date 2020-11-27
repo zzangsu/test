@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+}
+.foryou { 
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
+  height: 0vh;
+  color: #111;
+}
+
+.logo { font-size: 6rem; }
+.mark { 
+  border-bottom: 4px solid #111; 
+  width: 2.8rem;
+  position: absolute;
+  top: 10rem;
+  left:0.25rem;
+  transform: translate3d(0px, 0px, 0px);
+  animation: mark-anim 10s infinite cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.r,
+.e1,
+.s1,
+.s2,
+.e2 { will-change: margin-left, margin-right; }
+
+.r { 
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  animation: r-anim 10s infinite cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.e1 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  animation: e1-anim 10s infinite cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.s1 { 
+  margin-left: 1rem;
+  margin-right: 1rem; 
+  animation: s1-anim 10s infinite cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.s2 { 
+  margin-left: 1rem;
+  margin-right: 1rem;
+  animation: s2-anim 10s infinite cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.e2 { 
+  margin-left: 2rem;
+  margin-right: 3rem;
+  animation: e2-anim 10s infinite cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+
+@keyframes mark-anim {
+  0%, 25%, 100% { 
+    left: 32%;
+  }
+  50%, 75%  {
+    left: 63.5%;
+  }
+}
+
+
+@keyframes r-anim {
+  0%, 25%, 100% { 
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+  50%, 75%  {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
+}
+
+@keyframes e1-anim {
+  0%, 25%, 100% { 
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  50%, 75%  {
+    margin-left: 1rem;
+    margin-right: 1rem; 
+  }
+}
+
+@keyframes s1-anim {
+  0%, 25%, 100% { 
+    margin-left: 1rem;
+    margin-right: 1rem; 
+  }
+  50%, 75%  {
+    margin-left: 1rem;
+    margin-right: 1rem;  
+  }
+}
+
+@keyframes s2-anim {
+  0%, 25%, 100% { 
+    margin-left: 1rem;
+    margin-right: 2rem; 
+  }
+  50%, 75%  {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@keyframes e2-anim {
+  0%, 25%, 100%   { 
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+  50%, 75% {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.container{
+  height: 80px;
+  width: 50vw;
+  line-height: 80px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  border-radius: 20px;
+}
+.container .menu{
+  display: flex;
+  position: relative;
+}
+.container .menu li{
+  list-style: none;
+  flex: 1;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+.container .menu li a{
+  color: #1d1f20;
+  transition: color 0.3s ease;
+}
+.container .menu li:hover a{
+  color: #0067FF;
+}
+.container .menu .line{
+  position: absolute;
+  height: 5px;
+  width: 33%;
+  background: #0067FF;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+.container .menu li:nth-child(2):hover ~ .line{
+  left: 0%;
+}
+.container .menu li:nth-child(2):hover ~ .line{
+  left: 35%;
+}
+.container .menu li:nth-child(3):hover ~ .line{
+  left: 67%;
+}
